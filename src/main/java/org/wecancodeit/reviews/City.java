@@ -1,2 +1,8 @@
-package org.wecancodeit.reviews;public class City {
+package org.wecancodeit.reviews;
+
+import javax.persistence.Entity;
+
+@Entity
+public class City {
+    private String name;
 }
