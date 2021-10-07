@@ -2,42 +2,34 @@ package org.wecancodeit.reviews;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Collection;
 
 @Entity
-public class City {
+public class CityReview {
 
     @Id
     private Long id;
     private String name;
-    private String countryState;
-    private String region;
     private String slogan;
     private Long population;
+    private String review;
 
 
-    public City(String name, String countryState, String region, String slogan, Long population, Long id) {
+    public CityReview(Long id, String name, String slogan, Long population, String review) {
+        this.id = id;
         this.name = name;
-        this.countryState = countryState;
-        this.region = region;
         this.slogan = slogan;
         this.population = population;
-        this.id = id;
+        this.review = review;
+
     }
 
-    public City(){
-
+    public Long getId() {
+        return id;
     }
 
     public String getName() {
         return name;
-    }
-
-    public String getCountryState() {
-        return countryState;
-    }
-
-    public String getRegion() {
-        return region;
     }
 
     public String getSlogan() {
@@ -48,7 +40,8 @@ public class City {
         return population;
     }
 
-    public Long getId() {
-        return id;
+    public String getReview() {
+        return review;
     }
+
 }

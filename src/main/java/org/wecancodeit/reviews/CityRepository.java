@@ -4,25 +4,25 @@ import java.util.HashMap;
 
 public class CityRepository {
 
-    public HashMap<Long, City> cities;
+    public HashMap<Long, CityReview> cities;
 
     public CityRepository() {
         cities = new HashMap<>();
-        City city1 = new City("Portland", "Oregon, USA", "North America", "City of Roses", 600000l,1l);
-        City city2 = new City("Seattle", "Washington, USA", "North America", "Emerald City", 737000l, 2l);
-        City city3 = new City("Shanghai", "TBD, China", "Asia", "Wonderful Everyday!", 27795702l, 3l);
-        City city4 = new City("London", "England, UK", "Europe", "City Full of Life", 8960000l, 4l);
-        cities.put(city1.getId(), city1);
-        cities.put(city2.getId(), city2);
-        cities.put(city3.getId(), city3);
-        cities.put(city4.getId(), city4);
+        CityReview cityReview1 = new CityReview(1l, "Portland","City of Roses",600000l,"");
+        CityReview cityReview2 = new CityReview(2l, "Seattle", "Emerald City",7370000l,"");
+        CityReview cityReview3 = new CityReview(3l,"Columbus", "Buckeye City",850000l, "");
+        CityReview cityReview4 = new CityReview(4l, "Washington D.C.","Capital City",500000l,"");
+        cities.put(cityReview1.getId(), cityReview1);
+        cities.put(cityReview2.getId(), cityReview2);
+        cities.put(cityReview3.getId(), cityReview3);
+        cities.put(cityReview4.getId(), cityReview4);
     }
 
-    public City getById(Long id){
+    public CityReview getById(Long id){
         return cities.get(id);
     }
 
-    public HashMap<Long, City> getCities(){
+    public HashMap<Long, CityReview> getCities(){
         return cities;
     }
 }

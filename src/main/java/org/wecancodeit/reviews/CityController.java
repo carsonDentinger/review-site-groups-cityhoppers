@@ -27,6 +27,12 @@ public class CityController {
         cityModel.addAttribute("Cities", cityRepo.getCities().values());
         return "CityLists";
     }
+//    @RequestMapping("/Regions")
+//    public String getRegions(Model regionModel){
+//        regionModel.addAttribute("Region Name", regionRepo.getById(1l));
+//        regionModel.addAttribute("Regions", regionRepo.getRegions().values());
+//        return "Regions";
+//    }
 
 
 }
