@@ -1,5 +1,7 @@
 package org.wecancodeit.reviews;
 
+import org.wecancodeit.reviews.model.CityReview;
+
 import java.util.HashMap;
 
 public class CityRepository {
@@ -20,9 +22,13 @@ public class CityRepository {
 
     public CityReview getById(Long id){
         return cities.get(id);
+
     }
 
     public HashMap<Long, CityReview> getCities(){
         return cities;
+
     }
+
+
 }

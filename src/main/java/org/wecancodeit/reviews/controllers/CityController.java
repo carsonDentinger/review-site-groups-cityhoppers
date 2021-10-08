@@ -1,8 +1,9 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.wecancodeit.reviews.CityRepository;
 
 import javax.annotation.Resource;
 
@@ -18,7 +19,7 @@ public class CityController {
 
     @RequestMapping("/")
     public String getHomePage(Model introModel){
-        return null;
+        return "reviewHome";
     }
 
     @RequestMapping("/CityReviews")
@@ -27,6 +28,7 @@ public class CityController {
         cityModel.addAttribute("Cities", cityRepo.getCities().values());
         return "CityLists";
     }
+
 //    @RequestMapping("/Regions")
 //    public String getRegions(Model regionModel){
 //        regionModel.addAttribute("Region Name", regionRepo.getById(1l));

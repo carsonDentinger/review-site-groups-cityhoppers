@@ -1,7 +1,12 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.model;
+
+
+import org.wecancodeit.reviews.model.CityReview;
 
 
 import java.util.Collection;
+
+
 
 public class Region {
     private String regionName;
