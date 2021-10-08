@@ -26,7 +26,7 @@ public class CityRepository {
     }
 
     public HashMap<Long, CityReview> getCities(){
-        return cities;
+         return cities;
 
     }
 

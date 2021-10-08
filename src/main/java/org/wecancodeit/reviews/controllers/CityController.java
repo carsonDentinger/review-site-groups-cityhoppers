@@ -10,11 +10,11 @@ import javax.annotation.Resource;
 @Controller
 public class CityController {
 
-    @Resource
-    private CityRepository cityRepo;
+//    @Resource
+//    private CityRepository cityRepo;
 
-    public CityController (CityRepository cityRepo){
-        this.cityRepo = cityRepo;
+    public CityController (){
+
     }
 
     @RequestMapping("/")
@@ -24,7 +24,8 @@ public class CityController {
 
     @RequestMapping("/CityReviews")
     public String getCityRepo(Model cityModel){
-        cityModel.addAttribute("City", cityRepo.getById(1l));
+        //cityModel.addAttribute("City", cityRepo.getById(1l));
+        CityRepository cityRepo = new CityRepository();
         cityModel.addAttribute("Cities", cityRepo.getCities().values());
         return "CityLists";
     }

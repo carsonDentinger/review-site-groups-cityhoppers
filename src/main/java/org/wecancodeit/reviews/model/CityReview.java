@@ -4,10 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Collection;
 
-@Entity
+//@Entity
 public class CityReview {
 
-    @Id
+    //@Id
     private Long id;
     private String name;
     private String slogan;
