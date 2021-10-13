@@ -1,4 +1,4 @@
-package org.wecancodeit.reviews;
+package repos;
 
 import org.wecancodeit.reviews.model.CityReview;
 
