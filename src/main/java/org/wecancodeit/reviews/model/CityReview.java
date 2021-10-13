@@ -15,15 +15,14 @@ public class CityReview {
     private String slogan;
     private Long population;
     private String review;
-//    map later
-    @ManyToMany()
+
+    @ManyToMany
     private Collection<HashPage> hashPages;
-//    map later
-    @ManyToOne()
+
+    @ManyToOne
     private Region region;
 
-    public CityReview(Long id, String name, String slogan, Long population, String review, Region region, HashPage...hashPages) {
-        this.id = id;
+    public CityReview(String name, String slogan, Long population, String review, Region region, HashPage...hashPages) {
         this.name = name;
         this.slogan = slogan;
         this.population = population;
@@ -31,6 +30,11 @@ public class CityReview {
         this.hashPages = Arrays.asList(hashPages);
         this.region = region;
     }
+
+    public CityReview(){
+        //zerg arg constructor
+    }
+
 
     public Long getId() {
         return id;

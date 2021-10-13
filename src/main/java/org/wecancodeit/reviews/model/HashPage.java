@@ -15,15 +15,19 @@ public class HashPage {
     private long id;
     private String name;
     private String description;
-//    insert mapping
-    @ManyToMany()
+
+    @ManyToMany(mappedBy = "hashPages")
     private Collection<CityReview> cityReviews;
 
-    public HashPage(long id, String name, String description, CityReview...cityReviews) {
-        this.id = id;
+    public HashPage(String name, String description) {
+
         this.name = name;
         this.description = description;
-        this.cityReviews = Arrays.asList(cityReviews);
+
+    }
+
+    public HashPage() {
+     //zero arg constructor
     }
 
     public long getId() {

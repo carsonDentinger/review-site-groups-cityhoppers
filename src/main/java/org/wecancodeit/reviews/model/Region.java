@@ -20,14 +20,18 @@ public class Region {
     private String regionName;
     private String regionDescription;
 
-    @OneToMany()
+    @OneToMany(mappedBy = "region")
     private Collection<CityReview> cityReviews;
 
-    public Region(long id, String regionName, String regionDescription, Collection<CityReview> cityReviews) {
-        this.id = id;
+    public Region(String regionName, String regionDescription) {
+
         this.regionName = regionName;
         this.regionDescription = regionDescription;
-        this.cityReviews = cityReviews;
+
+    }
+
+    public Region(){
+        //zero argument constructor
     }
 
     public long getId() {
