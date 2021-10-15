@@ -1,0 +1,27 @@
+<!DOCTYPE html >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/nav.css">
+        <link rel="stylesheet" href="">
+        <title>Regions</title>
+    </head>
+    <body>
+    <div th:insert = "fragments/header-footer:: header"></div>
+
+        <h1>Regions</h1>
+        <h2>Explore the United States</h2>
+        <h3>Available Regions to Explore</h3>
+        <div th:each ="Region: ${Regions}">
+            <ul >
+                <li><a  th:text = "${Region.regionName}" th:href = "'/SubRegion/'+ ${Region.id}"></a></li>
+                <li th:text = "${Region.regionDescription}"></li>
+            </ul>
+
+        </div>
+    <div th:insert ="fragments/header-footer:: footer"></div>
+    </body>
+</html>

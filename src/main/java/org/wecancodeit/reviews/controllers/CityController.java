@@ -26,9 +26,9 @@ public class CityController {
         return "reviewHome";
     }
 
-    @RequestMapping("/CityReviewsList")
+    @RequestMapping("/CityReviewList")
     public String getCityReviews(Model cityModel) {
-        cityModel.addAttribute("Cities", cityRepo.findAll());
+        cityModel.addAttribute("CityReviewList", cityRepo.findAll());
         return "CityReviewList";
     }
 
@@ -38,10 +38,10 @@ public class CityController {
         return "Regions";
     }
 
-    @RequestMapping("/Hashtag")
+    @RequestMapping("/Hashtags")
     public String getHashPage(Model hashModel) {
-        hashModel.addAttribute("Hashtag", hashRepo.findAll());
-        return "Hashtag";
+        hashModel.addAttribute("Hashtags", hashRepo.findAll());
+        return "Hashtags";
     }
 
     @RequestMapping("/SubRegion/{id}")
@@ -54,7 +54,12 @@ public class CityController {
     public String getSubHashPage(Model subHashModel, @PathVariable Long id) {
         subHashModel.addAttribute("SubHashPage", hashRepo.findById(id).get());
         return "SubHash";
+    }
 
+    @RequestMapping("/CityReview/{id}")
+    public String getSubCityReview(Model subCityReviewModel, @PathVariable Long id) {
+        subCityReviewModel.addAttribute("CityReview", cityRepo.findById(id).get());
+        return "CityReview";
     }
 
 }

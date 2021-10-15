@@ -1,36 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="/src/main/resources/templates/css/homeLayout.css">
-    <link rel="stylesheet" href="/src/main/resources/templates/css/homeStyle.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/homeLayout.css">
+    <link rel="stylesheet" href="/css/homeStyle.css">
     <title>Review Site Home</title>
 </head>
 
-<header>
-        <div id="logo">
-            <h1>City Hoppers</h1>
-        </div >
-        <div>
-            <ul id="regions">
-                <li class="topNavLinks"><a href="/src/main/resources/templates/Regions.html">Regions</a></li>
-                <li class="topNavLinks"><a href="/src/main/resources/templates/Hashtag.html">HashTags</a></li>
-                <li class="topNavLinks"><a href="/src/main/resources/templates/">City Review List</a></li>
-            </ul>
-        </div>
-        <!-- <div class="searchBar">
-            <label for="gsearch">Search Google:</label>
-            <input type="search" id="gsearch" name="gsearch">
-        </div> -->
-
-    
-  
-</header>
 
 <body>
+
+    <div th:insert = "fragments/header-footer:: header"></div>
 
 <div class="main-body1">
     <h2></h2>
@@ -41,11 +25,6 @@
     <h2></h2>
     <p></p>
 </div>
-<footer>
-    <div class="footerdiv">
-        <h3>CONTACT</h3>
-        <p>example@gmail.com</p>
-    </div>
-</footer>
+    <div th:insert ="fragments/header-footer:: footer"></div>
 </body>
 </html>

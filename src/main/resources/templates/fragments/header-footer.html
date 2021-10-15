@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/src/main/resources/templates/fragments/fragmentNav.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<header th:fragment = "header">
+  <div id="logo">
+    <h1>City Hoppers</h1>
+  </div>
+  <div>
+    <ul id="regions">
+      <li class="topNavLinks"><a href="/Regions">Regions</a></li>
+      <li class="topNavLinks"><a href="/Hashtags">HashTags</a></li>
+      <li class="topNavLinks"><a href="/CityReviewList">City Review List</a></li>
+    </ul>
+  </div>
+</header>
+<body>
+  <footer th:fragment = "footer">
+    <div class="footerdiv">
+      <h3>CONTACT</h3>
+      <p>example@gmail.com</p>
+    </div>
+  </footer>
+</body>
+</html>

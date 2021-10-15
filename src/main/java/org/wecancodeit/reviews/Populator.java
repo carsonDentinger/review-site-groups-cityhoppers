@@ -49,13 +49,11 @@ public class Populator implements CommandLineRunner {
         CityReview cityReview1 = new CityReview("Portland", "City of Roses", 600000l, "PortlandReview", west, nightLife);
         CityReview cityReview2 = new CityReview("Seattle", "Emerald City", 7370000l, "", west, historicAttractions);
         CityReview cityReview3 = new CityReview("Columbus", "Buckeye City", 850000l, "", midwest, historicAttractions);
-        CityReview cityReview4 = new CityReview("Washington D.C.", "Capital City", 500000l, "", east, historicAttractions);
+        CityReview cityReview4 = new CityReview("Washington D.C.", "Capital City", 500000l, "", east, historicAttractions, musicCulture);
         cityRepo.save(cityReview1);
         cityRepo.save(cityReview2);
         cityRepo.save(cityReview3);
         cityRepo.save(cityReview4);
-
-
     }
 
 }

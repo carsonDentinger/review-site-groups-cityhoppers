@@ -1,39 +1,24 @@
 <!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="">
-    <title>Regions</title>
+    <title>CityReviewList</title>
 </head>
 <body>
-    <header>
-        <div id="logo">
-            <h1>City Hoppers</h1>
-        </div>
-        <div>
-            <ul id="regions">
-                <li class="topNavLinks"><a href="/src/main/resources/templates/Regions.html">Regions</a></li>
-                <li class="topNavLinks"><a href="/src/main/resources/templates/Hashtag.html">HashTags</a></li>
-                <li class="topNavLinks"><a href="/src/main/resources/templates/">City Review List</a></li>
-            </ul>
-        </div>
-</header>
+<div th:insert = "fragments/header-footer:: header"></div>
 
 <body>
-    <h2>City List</h2>
+    <h1>All City Hopper Reviews</h1>
     <ul>
-        <li>Seattle</li>
-        <li>Portland</li>
-        <li>Columbus</li>
-        <li>New York</li>
+       <li th:each = "CityReview: ${CityReviewList}" >
+           <a th:href = "'/CityReview/' + ${CityReview.id}" th:text="${CityReview.name}">+</a>
+       </li>
     </ul>
 
-    <footer>
-        <div class="footerdiv">
-            <h3>CONTACT</h3>
-            <p>example@gmail.com</p>
-        </div>
-    </footer>
+    <div th:insert ="fragments/header-footer:: footer"></div>
 </body>

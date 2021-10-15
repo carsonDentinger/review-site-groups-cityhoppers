@@ -22,6 +22,9 @@ public class CityReview {
     @ManyToOne
     private Region region;
 
+    @ElementCollection
+    private Collection<String> comments;
+
     public CityReview(String name, String slogan, Long population, String review, Region region, HashPage...hashPages) {
         this.name = name;
         this.slogan = slogan;
@@ -62,6 +65,14 @@ public class CityReview {
 
     public Region getRegion() {
         return region;
+    }
+
+    public void addHashTag(HashPage hashpage){
+        hashPages.add(hashpage);
+    }
+
+    public void addComment(String comment) {
+        comments.add(comment);
     }
 
     @Override
