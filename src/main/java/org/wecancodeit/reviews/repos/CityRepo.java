@@ -4,4 +4,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.wecancodeit.reviews.model.CityReview;
 
 public interface CityRepo extends CrudRepository<CityReview, Long> {
+    CityReview findByName(String name);
+//    City Name
+//    Region
+//
 }

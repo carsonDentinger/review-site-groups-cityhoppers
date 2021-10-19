@@ -38,11 +38,7 @@ public class CityController {
         return "Regions";
     }
 
-    @RequestMapping("/Hashtags")
-    public String getHashPage(Model hashModel) {
-        hashModel.addAttribute("Hashtags", hashRepo.findAll());
-        return "Hashtags";
-    }
+
 
     @RequestMapping("/SubRegion/{id}")
     public String getSubRegion(Model subRegionModel, @PathVariable Long id) {
@@ -50,11 +46,7 @@ public class CityController {
         return "SubRegion";
     }
 
-    @RequestMapping("/SubHashPage/{id}")
-    public String getSubHashPage(Model subHashModel, @PathVariable Long id) {
-        subHashModel.addAttribute("SubHashPage", hashRepo.findById(id).get());
-        return "SubHash";
-    }
+
 
     @RequestMapping("/CityReview/{id}")
     public String getSubCityReview(Model subCityReviewModel, @PathVariable Long id) {
