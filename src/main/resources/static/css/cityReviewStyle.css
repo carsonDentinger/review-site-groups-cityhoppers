@@ -1,16 +1,15 @@
-
-.mainContent{
-    display:grid;
+.mainContent {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 3rem;
     justify-content: center;
-    margin: 5rem;
-    
+    margin: 3rem;
+
 }
 
 .cityImg {
-    grid-column-start:1;
-    grid-column-end:2;
+    grid-column-start: 1;
+    grid-column-end: 2;
     background-color: lightblue;
     border-style: solid;
     border-width: 2px;
@@ -29,8 +28,20 @@
 
 .infoBlock li {
     list-style: none;
-    
 }
 
+.hashFormBlock {
+    background-color: lightblue;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    min-height: 200px;   
+}
 
-
+.associatedHashes {
+    background-color: lightblue;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    min-height: 200px;
+}

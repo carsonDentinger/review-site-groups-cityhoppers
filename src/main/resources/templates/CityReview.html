@@ -34,9 +34,26 @@
             <p th:text="${CityReview.review}"></p>
         </div>
 
+        <div class="hashFormBlock">
+            <form action="/Hashtags" method="POST">
+
+                <label for="newHash">Add Hashtag placeholder:</label><br>
+                <input type="text" id="newHash" name="newHash"><br>
+
+                <label for="hashDescription">Hash Description:</label><br>
+                <input type="text" id="hashDescription" name="hashDescription"><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div class="associatedHashes">
+            <ul>
+                <li th:each="allHashes: ${CityReview}" th:text ="${allHashes.hashPages}"></li>
+
+            </ul>
+        </div>
     </div>
-
-
     <div th:insert="fragments/header-footer:: footer"> footer </div>
 
 </body>
