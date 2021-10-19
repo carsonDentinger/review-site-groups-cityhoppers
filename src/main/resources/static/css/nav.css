@@ -1,17 +1,27 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+
+* {
     margin: 0;
     padding: 0;
 }
 
-header{
+
+body {
+    font-family: 'Caveat', sans-serif;
+
+}
+
+header {
     display: flex;
     justify-content: space-between;
     height: 3.5rem;
-    background-color: rgb(167, 167, 167);
+    background-color: #B4C5E4;
     border-style: solid;
 }
 
-#regions{
+#regions {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -22,12 +32,12 @@ header{
     padding-bottom: .5rem;
 }
 
-.topNavLinks{
+.topNavLinks {
     padding: 1rem;
     list-style: none;
 }
 
-.topNavLinks a{
+.topNavLinks a {
     color: black;
     text-decoration: none;
     font-family: 'Caveat', cursive;
@@ -35,10 +45,13 @@ header{
 }
 
 .topNavLinks a:hover {
-    color: navy;
+    color: green;
+    text-decoration: none;
+    font-family: 'Caveat', cursive;
+    font-size: x-large;
 }
 
-#logo{
+#logo {
     padding-left: 1rem;
     padding-right: 1rem;
     background-color: rgb(206, 206, 206);
@@ -47,17 +60,15 @@ header{
     border-style: double;
 }
 
-h2{
-    padding:2rem;
+h2 {
+    padding: 2rem;
 }
 
-
-
-#contact{
+#contact {
     font-family: 'Caveat', cursive;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     position: fixed;
@@ -67,7 +78,7 @@ footer{
     height: 3rem;
     border-top: 0ch;
     border-style: solid;
-    background-color: rgb(107, 106, 106);
+    background-color: #B4C5E4;
 }
 
 .footerdiv {
@@ -77,6 +88,7 @@ footer{
     transform: translate(-50%, -50%);
 }
 
-.footerdiv h3, p{
+.footerdiv h3,
+p {
     text-align: center;
 }

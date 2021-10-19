@@ -1,6 +1,7 @@
 package org.wecancodeit.reviews.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
@@ -32,12 +33,16 @@ public class CityReview {
         this.review = review;
         this.hashPages = Arrays.asList(hashPages);
         this.region = region;
+        this.comments = new ArrayList<>();
     }
 
     public CityReview(){
         //zerg arg constructor
     }
 
+    public Collection<String> getComments() {
+        return comments;
+    }
 
     public Long getId() {
         return id;

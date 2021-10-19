@@ -3,7 +3,10 @@ package org.wecancodeit.reviews.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.wecancodeit.reviews.model.CityReview;
 import org.wecancodeit.reviews.repos.CityRepo;
 import org.wecancodeit.reviews.repos.HashRepo;
 import org.wecancodeit.reviews.repos.RegionsRepo;
@@ -52,6 +55,19 @@ public class CityController {
     public String getSubCityReview(Model subCityReviewModel, @PathVariable Long id) {
         subCityReviewModel.addAttribute("CityReview", cityRepo.findById(id).get());
         return "CityReview";
+    }
+
+
+    @PostMapping("/addComment")
+    public String addComment(@RequestParam long cityID, @RequestParam String cname) {
+        CityReview review1 = cityRepo.findById(cityID).get();
+
+        String comment1 = cname;
+
+        review1.addComment(comment1);
+        cityRepo.save(review1);
+
+        return "redirect:/CityReview/" + cityID;
     }
 
 }

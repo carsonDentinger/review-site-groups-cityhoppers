@@ -2,6 +2,13 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet"> -->
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/cityReviewStyle.css">
@@ -10,62 +17,99 @@
 
 <body>
 
-<div th:insert = "fragments/header-footer:: header"></div>
-    <h1 th:text = "${CityReview.name}"></h1>
-    <h2 th:text = "${CityReview.slogan}"></h2>
-   <h3 th:text = "'Population ' + ${CityReview.population}"></h3>
-    <p th:text = "${CityReview.review}"></p>
-<div>
-<!--    Added a list to show the hashtags that belong to the current city. Need to add hfref tags for linking-->
+    <div th:insert="fragments/header-footer:: header"></div>
+    <h1 th:text="${CityReview.name}"></h1>
+    <h2 th:text="${CityReview.slogan}"></h2>
+    <h3 th:text="'Population ' + ${CityReview.population}"></h3>
+    <p th:text="${CityReview.review}"></p>
     <div>
-        <h3>Hashtags:</h3>
+        <!--    Added a list to show the hashtags that belong to the current city. Need to add hfref tags for linking-->
+        <div>
+            <h3>Hashtags:</h3>
+            <ul>
+<!--                <li th:each="hashtag: ${CityReview.hashPages}"  th:text="${hashtag.name}"></li>-->
+            </ul>
+        </div>
+
+        <div class="mainContent">
+
+            <div class="cityImg">
+                <p>city picture</p>
+            </div>
+
+            <div class="infoBlock">
+                <ul>
+                    <li>
+                        <h1 th:text="${CityReview.name}"></h1>
+                    </li>
+                    <li>
+                        <h2 th:text="${CityReview.slogan}"></h2>
+                    </li>
+
+                    <li>
+                        <h3 th:text="'Population ' + ${CityReview.population}"></h3>
+                    </li>
+                </ul>
+
+                <p th:text="${CityReview.review}"></p>
+            </div>
+
+            <div class="infoBlock">
+                <ul>
+                    <li th:each ="hashPage: ${CityReview.hashPages}"><a th:href ="'/SubHashPage/' + ${hashPage.id}">
+                        <h3 th:text="${hashPage.name}"></h3></a></li>
+                </ul>
+
+
+            </div>
+
+
+            <br>
+            <br>
+            <!--    Action has the mapping for the under the add hash for the controller the method needs to be post otherwise runs
+ as a get and doesn't query the DB properly  -->
+            <form action="/addHash" method="post">
+                <!--        this is a hidden field to the user. We need it to map the city review page we are currently on. Also match
+it with the correct thymeleaf syntax. Name and value have a key value relationship-->
+                <input type="hidden" name="cityID" th:value="${CityReview.id}">
+                <!--        the label is what the user sees in the text box ie Enter Hashtag-->
+                <label for="name">Enter Hashtag:</label><br>
+                <!--        We're expecting a text input from the user. The "id" here needs to match the "for" above-->
+                <input type="text" id="name" name="name"><br>
+                <!--        Repeat the steps for label and input above-->
+                <label for="description">Enter Description:</label><br>
+                <input type="text" id="description" name="description"><br><br>
+                <!--        Button -->
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+
+        <br>
+        <br>
+        <!--    Action has the mapping for the under the add hash for the controller the method needs to be post otherwise runs
+as a get and doesn't query the DB properly  -->
+        <form action="/addComment" method="post">
+
+            <input type="hidden" name="cityID" th:value="${CityReview.id}">
+
+            <label for="cname">Comment:</label><br>
+            <input type="text" id="cname" name="cname"><br>
+
+
+            <input type="submit" value="Submit">
+            <br>
+            <br>
+        </form>
+    </div>
+
+    <div>
         <ul>
-            <li th:each="hashtag: ${CityReview.hashPages}" th:text="${hashtag.name}"></li>
+            <li th:each="cityReviewcomments: ${CityReview.comments}"> <p th:text="${cityReviewcomments}"></p> </li>
         </ul>
     </div>
 
-    <div class="mainContent">
-
-        <div class="cityImg">
-            <p>city picture</p>
-        </div>
-
-        <div class="infoBlock">
-            <ul>
-                <li>
-                    <h1 th:text="${CityReview.name}"></h1>
-                </li>
-                <li>
-                    <h2 th:text="${CityReview.slogan}"></h2>
-                </li>
-                
-                <li>
-                    <h3 th:text="'Population ' + ${CityReview.population}"></h3>
-                </li>
-            </ul>
-
-            <p th:text="${CityReview.review}"></p>
-        </div>
-    <br>
-    <br>
-<!--    Action has the mapping for the under the add hash for the controller the method needs to be post otherwise runs
- as a get and doesn't query the DB properly  -->
-    <form action="/addHash" method="post">
-<!--        this is a hidden field to the user. We need it to map the city review page we are currently on. Also match
-it with the correct thymeleaf syntax. Name and value have a key value relationship-->
-        <input type="hidden" name="cityID" th:value="${CityReview.id}">
-<!--        the label is what the user sees in the text box ie Enter Hashtag-->
-        <label for="name">Enter Hashtag:</label><br>
-<!--        We're expecting a text input from the user. The "id" here needs to match the "for" above-->
-        <input type="text" id="name" name="name"><br>
-<!--        Repeat the steps for label and input above-->
-        <label for="description">Enter Description:</label><br>
-        <input type="text" id="description" name="description"><br><br>
-<!--        Button -->
-        <input type="submit" value="Submit">
-    </form>
-</div>
-<div th:insert ="fragments/header-footer:: footer"></div>
-</body>
+        <div th:insert="fragments/header-footer:: footer"></div>
+    </body>
 
 </html>
