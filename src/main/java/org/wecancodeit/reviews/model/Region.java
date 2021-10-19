@@ -19,15 +19,16 @@ public class Region {
     private long id;
     private String regionName;
     private String regionDescription;
+    private String imgUrl;
 
     @OneToMany(mappedBy = "region")
     private Collection<CityReview> cityReviews;
 
-    public Region(String regionName, String regionDescription) {
+    public Region(String regionName, String regionDescription, String imgUrl) {
 
         this.regionName = regionName;
         this.regionDescription = regionDescription;
-
+        this.imgUrl = imgUrl;
     }
 
     public Region(){
@@ -44,6 +45,10 @@ public class Region {
 
     public String getRegionDescription() {
         return regionDescription;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
     }
 
     public Collection<CityReview> getCityReviews() {

@@ -24,16 +24,16 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Region midwest = new Region("Midwest", "no longer mad");
+        Region midwest = new Region("Midwest", "no longer mad", "/img/midwest.jpg");
         regionRepo.save(midwest);
 
-        Region west = new Region("West", "West coast best coast");
+        Region west = new Region("West", "West coast best coast", "/img/West.jpg");
         regionRepo.save(west);
 
-        Region east = new Region("EastCoast", "East coast beast coast");
+        Region east = new Region("EastCoast", "East coast beast coast", "/img/NewEngland.jpg");
         regionRepo.save(east);
 
-        Region south = new Region("south", "the south will rise");
+        Region south = new Region("south", "the south will rise", "/img/South.jpg");
         regionRepo.save(south);
 
         HashPage nightLife = new HashPage("Night Life", "lorem ipsum");
@@ -44,7 +44,6 @@ public class Populator implements CommandLineRunner {
 
         HashPage historicAttractions = new HashPage("Historic Attractions", "Different attractions to visit");
         hashRepo.save(historicAttractions);
-
 
         CityReview cityReview1 = new CityReview("Portland", "City of Roses", 600000l, "PortlandReview", west, nightLife);
         CityReview cityReview2 = new CityReview("Seattle", "Emerald City", 7370000l, "", west, historicAttractions);
