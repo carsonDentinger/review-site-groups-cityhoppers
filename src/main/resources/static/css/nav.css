@@ -29,9 +29,7 @@ header{
     color: green;
 }
 
-h2{
-    padding:2rem;
-}
+h2{}
 
 footer{
     display: flex;
