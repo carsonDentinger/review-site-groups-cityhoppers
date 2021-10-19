@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/cityReviewStyle.css">
     <title>CityReview</title>
 </head>
 
 <body>
 
-<div th:insert = "fragments/header-footer:: header"></div>
-    <h1 th:text = "${CityReview.name}"></h1>
-    <h2 th:text = "${CityReview.slogan}"></h2>
-   <h3 th:text = "'Population ' + ${CityReview.population}"></h3>
-    <p th:text = "${CityReview.review}"></p>
+    <div th:insert="fragments/header-footer:: header">header and nav</div>
 
-<div th:insert ="fragments/header-footer:: footer"></div>
+    <div class="mainContent">
+
+        <div class="cityImg">
+            <p>city picture</p>
+        </div>
+
+        <div class="infoBlock">
+            <ul>
+                <li>
+                    <h1 th:text="${CityReview.name}"></h1>
+                </li>
+                <li>
+                    <h2 th:text="${CityReview.slogan}"></h2>
+                </li>
+                <li>
+                    <h3 th:text="'Population ' + ${CityReview.population}"></h3>
+                </li>
+            </ul>
+
+            <p th:text="${CityReview.review}"></p>
+        </div>
+
+    </div>
+
+
+    <div th:insert="fragments/header-footer:: footer"> footer </div>
+
 </body>
+
 </html>

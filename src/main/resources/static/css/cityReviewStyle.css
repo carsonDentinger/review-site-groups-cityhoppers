@@ -1,0 +1,36 @@
+
+.mainContent{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    justify-content: center;
+    margin: 5rem;
+    
+}
+
+.cityImg {
+    grid-column-start:1;
+    grid-column-end:2;
+    background-color: lightblue;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    min-height: 500px;
+}
+
+.infoBlock {
+    background-color: lightblue;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    min-height: 500px;
+
+}
+
+.infoBlock li {
+    list-style: none;
+    
+}
+
+
+
