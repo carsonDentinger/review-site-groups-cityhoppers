@@ -25,7 +25,7 @@ xmlns:th="http://www.thymeleaf.org">
             <ul id="cardGrid">
                 <li class="card"  th:each ="Region: ${Regions}"><a   th:href = "'/SubRegion/'+ ${Region.id}">
                     <div class="container">
-                    <h3 class="cardTitle" th:text = "${Region.regionName}">West</h3>
+                    <h3 class="cardTitle" th:text = "${Region.regionName}"></h3>
                     <img th:src="${Region.imgUrl}" class="image" >
                 </div></a>
                 </li>

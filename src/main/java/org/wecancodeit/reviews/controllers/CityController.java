@@ -69,5 +69,4 @@ public class CityController {
 
         return "redirect:/CityReview/" + cityID;
     }
-
 }
