@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:regionSelect="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Write a City Review</title>
+</head>
+
+
+<body>
+
+<div th:insert="fragments/header-footer:: header"></div>
+
+<form action="/addCityReview" method="post">
+
+    <label for="name">Enter A City</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="slogan">Enter A City Slogan</label><br>
+    <input type="text" id="slogan" name="slogan"><br>
+
+    <label for="population">Enter A Population</label><br>
+    <input type="number" id="population" name="population"><br>
+
+    <label for="review">Review Here</label><br>
+    <input type="text" id="review" name="review"><br><br>
+
+    <label for="region">Select A Region</label><br>
+
+    <label for="region">Choose a region:</label>
+    <select name="region" id="region">
+
+        <option th:each="regionSelect: ${Regions}" th:value="${regionSelect.regionName}" th:text="${regionSelect.regionName}"></option>
+
+    </select>
+
+
+    <input type="submit" value="Submit">
+</form>
+
+<div th:insert="fragments/header-footer:: footer"></div>
+</body>
+</html>
