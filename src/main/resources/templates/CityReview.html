@@ -56,8 +56,9 @@
 
             <div class="infoBlock">
                 <ul>
-                    <li th:each ="hashPage: ${CityReview.hashPages}"><a th:href ="'/SubHashPage/' + ${hashPage.id}">
-                        <h3 th:text="${hashPage.name}"></h3></a></li>
+                    <li th:each ="hashPage: ${CityReview.hashPages}">
+                        <a th:href ="'/SubHashPage/' + ${hashPage.id}"> <h3 th:text="${hashPage.name}"></h3> </a>
+                    </li>
                 </ul>
 
 
@@ -101,13 +102,17 @@ as a get and doesn't query the DB properly  -->
             <br>
             <br>
         </form>
+
+        <div>
+            <ul>
+                <li th:each="cityReviewcomments: ${CityReview.comments}"> <p th:text="${cityReviewcomments}"></p> </li>
+            </ul>
+        </div>
+
+
     </div>
 
-    <div>
-        <ul>
-            <li th:each="cityReviewcomments: ${CityReview.comments}"> <p th:text="${cityReviewcomments}"></p> </li>
-        </ul>
-    </div>
+
 
         <div th:insert="fragments/header-footer:: footer"></div>
     </body>
