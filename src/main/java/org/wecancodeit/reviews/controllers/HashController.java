@@ -40,7 +40,7 @@ public class HashController {
 
     @PostMapping("/addHash")
 
-    public String addHash(@RequestParam long cityID, @RequestParam String name, @RequestParam String description) {
+    public String addHash(@RequestParam long cityID, @RequestParam String name, @RequestParam String description, @RequestParam String imgUrl) {
 //    Technically we add the hashtag underneath a city review. We call CityReview object, create a variable "review1",
 //    and get the city ID it correlates to. This is the hidden field on the form
         CityReview review1 = cityRepo.findById(cityID).get();
@@ -50,7 +50,7 @@ public class HashController {
         Optional<HashPage> hashOpt = hashRepo.findByName(name);
 //    If the optional is empty take the "hash1" variable and add it to our hash repo and save "hash1"
         if (hashOpt.isEmpty()) {
-            hash1 = new HashPage(name, description);
+            hash1 = new HashPage(name, description, imgUrl);
             hashRepo.save(hash1);
 //    If the system finds "hash1" get it
         } else {

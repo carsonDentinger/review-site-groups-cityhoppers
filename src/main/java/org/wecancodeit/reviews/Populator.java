@@ -36,14 +36,17 @@ public class Populator implements CommandLineRunner {
         Region south = new Region("south", "the south will rise", "/img/South.jpg");
         regionRepo.save(south);
 
-        HashPage nightLife = new HashPage("Night Life", "lorem ipsum");
+        HashPage nightLife = new HashPage("Night Life", "lorem ipsum", "/img/nightlife.jpg");
         hashRepo.save(nightLife);
 
-        HashPage musicCulture = new HashPage("Music Culture", " ");
+        HashPage musicCulture = new HashPage("Music Culture", "", "/img/music.jpg");
         hashRepo.save(musicCulture);
 
-        HashPage historicAttractions = new HashPage("Historic Attractions", "Different attractions to visit");
+        HashPage historicAttractions = new HashPage("Historic Attractions", "Different attractions to visit", "/img/history.jpg");
         hashRepo.save(historicAttractions);
+
+        HashPage foodCulture = new HashPage("Food Culture", "", "/img/restaurant.jpg");
+        hashRepo.save(foodCulture);
 
         CityReview cityReview1 = new CityReview("Portland", "City of Roses", 600000l, "PortlandReview", west, nightLife);
         CityReview cityReview2 = new CityReview("Seattle", "Emerald City", 7370000l, "", west, historicAttractions);
