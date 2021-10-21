@@ -5,6 +5,17 @@
     font-size: 4rem;
 }
 
+#mainBody{
+    margin: 0 auto;
+    display: grid;
+    justify-content: space-around;
+    background-color: aqua;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    width: fit-content;
+    margin-bottom: 6rem;
+}
+
 #cardGrid{
     list-style: none;
     display: grid;
@@ -15,14 +26,35 @@
     justify-items: center;
 }
 
+.card {
+    background-color: yellow;
+    width: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.container {
+    padding: 2px 16px;
+}
+
+
 .cardTitle{
     font-family: 'Caveat', cursive;
     font-size: xx-large;
     font-weight: bolder;
     padding-left: 40%;
 }
+.image{
+    width: 25rem;
+    height: auto;
+    border-radius: 10px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-#card1{
+
+/* #card1{
     grid-column: 1;
     grid-row: 1;
 }
@@ -40,37 +72,10 @@
 #card4{
     grid-column: 2;
     grid-row: 2;
-}
+} */
 
-.image{
-    width: 25rem;
-    height: auto;
-    border-radius: 10px;
-}
 
-.card {
-    background-color: yellow;
-    width: fit-content;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
-    transition: 0.3s;
-    border-radius: 10px;
-}
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 
-.container {
-    padding: 2px 16px;
-}
 
-#mainBody{
-    margin: 0 auto;
-    display: grid;
-    justify-content: space-around;
-    background-color: aqua;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    width: fit-content;
-    margin-bottom: 6rem;
-}
+
