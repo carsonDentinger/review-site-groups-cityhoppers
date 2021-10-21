@@ -16,6 +16,7 @@ public class CityReview {
     private String slogan;
     private Long population;
     private String review;
+    private String imgUrl;
 
     @ManyToMany
     private Collection<HashPage> hashPages;
@@ -26,11 +27,12 @@ public class CityReview {
     @ElementCollection
     private Collection<String> comments;
 
-    public CityReview(String name, String slogan, Long population, String review, Region region, HashPage...hashPages) {
+    public CityReview(String name, String slogan, Long population, String review, String imgUrl, Region region, HashPage...hashPages) {
         this.name = name;
         this.slogan = slogan;
         this.population = population;
         this.review = review;
+        this.imgUrl = imgUrl;
         this.hashPages = Arrays.asList(hashPages);
         this.region = region;
         this.comments = new ArrayList<>();
@@ -42,6 +44,10 @@ public class CityReview {
 
     public Collection<String> getComments() {
         return comments;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
     }
 
     public Long getId() {
