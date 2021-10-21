@@ -13,10 +13,10 @@
 <body>
 <div th:insert = "fragments/header-footer:: header"></div>
 <div>
-    <h1>All Hashtags</h1>
+    <h1 id="categoryTitle">All Categories</h1>
     <div id="mainBody">
         <ul id="cardGrid">
-            <li class="card" th:each = "hashtag: ${Hashtags}"><a  th:href = "'/SubHashPage/' + ${hashtag.id}">
+            <li class="card" th:each = "hashtag: ${Hashtags}"><a  th:href = "'/SubHashPage/' + ${hashtag.id}" id="cardLinks">
                 <div class="container">
                     <h3 class="cardTitle" th:text = "${hashtag.name}"></h3>
                     <img th:src="${hashtag.imgUrl}" class="image">

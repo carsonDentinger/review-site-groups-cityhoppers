@@ -30,10 +30,10 @@ public class Populator implements CommandLineRunner {
         Region west = new Region("West", "West coast best coast", "/img/West.jpg");
         regionRepo.save(west);
 
-        Region east = new Region("EastCoast", "East coast beast coast", "/img/NewEngland.jpg");
+        Region east = new Region("NorthEast", "East coast beast coast", "/img/NewEngland.jpg");
         regionRepo.save(east);
 
-        Region south = new Region("south", "the south will rise", "/img/South.jpg");
+        Region south = new Region("South", "the south will rise", "/img/South.jpg");
         regionRepo.save(south);
 
         HashPage nightLife = new HashPage("Night Life", "lorem ipsum", "/img/nightlife.jpg");

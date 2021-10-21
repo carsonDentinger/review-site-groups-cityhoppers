@@ -54,10 +54,15 @@ header {
 #logo {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: .25rem;
     background-color: rgb(206, 206, 206);
     font-family: 'Rampart One', cursive;
     color: black;
     border-style: double;
+}
+
+#logoLink{
+    text-decoration: none;
 }
 
 h2 {
