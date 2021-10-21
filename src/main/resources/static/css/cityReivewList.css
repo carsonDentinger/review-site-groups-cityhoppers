@@ -1,17 +1,22 @@
+/* 
 
-
-.main{
+#main{
     display: flex;
     background: darkmagenta;
-}
+} */
 
-.card-grid{
-    padding:1em;
+#card-grid{
+    list-style: none;
     display:grid;
     /* Auto fill set min size and as viewport expands will reseize to meet min value set. Auto fit defines size without making new colums and sizing down should viewport increase  */
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25%, .5fr));
     background:cyan;
+    padding:1em;
 }
-.img{
+#card{
+    background: brown;
+    width: fit-content;
+}
+/* .img{
     max-width: fit-content;
-}
+} */
