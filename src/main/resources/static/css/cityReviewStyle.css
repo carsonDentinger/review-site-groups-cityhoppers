@@ -1,3 +1,7 @@
+body {
+    background-color: #D1F0B1;
+}
+
 .mainContent {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -15,6 +19,8 @@
     border-width: 2px;
     border-radius: 5px;
     min-height: 500px;
+    background-color: #fff;
+    font-size: large;
 }
 
 .infoBlock {
@@ -23,6 +29,8 @@
     border-width: 2px;
     border-radius: 5px;
     min-height: 500px;
+    background-color: #fff;
+    font-size: large;
 
 }
 
@@ -35,13 +43,50 @@
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
-    min-height: 200px;   
+    min-height: 200px;
+    background-color: #fff;
+    font-size: medium;
 }
 
 .associatedHashes {
-    background-color: lightblue;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
     min-height: 200px;
+    background-color: #fff;
+    font-size: medium;
+}
+
+.commentDiv {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    min-height: 200px;
+    background-color: #fff;
+    font-size: medium;
+}
+
+.commentDiv li {
+ list-style: none;
+}
+
+form {
+    margin: 0rem 1rem;
+    padding: 0rem 1rem;
+
+}
+
+.formLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.commentBox {
+margin: 2rem 6rem;
+min-width:50px;
+min-height: 20px;
+boarder-color: black;
+border-radius: 5px;
+border-style: solid;
+border-width: 2px;
 }
