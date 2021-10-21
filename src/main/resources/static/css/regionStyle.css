@@ -5,6 +5,10 @@
     font-size: 4rem;
 }
 
+body{
+    background-color: #D1F0B1;
+}
+
 #cardGrid{
     list-style: none;
     display: grid;
@@ -30,7 +34,7 @@
 }
 
 .card {
-    background-color: yellow;
+    background-color: #C05746;
     width: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
     transition: 0.3s;
@@ -59,7 +63,7 @@
     margin: 0 auto;
     display: grid;
     justify-content: space-around;
-    background-color: aqua;
+    background-color: #D1F0B1;
     padding-left: 5rem;
     padding-right: 5rem;
     width: fit-content;
