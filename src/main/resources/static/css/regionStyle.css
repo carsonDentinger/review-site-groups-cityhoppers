@@ -39,6 +39,8 @@
 
 
 .cardTitle{
+    display: flex;
+    justify-content: center;
     font-family: 'Caveat', cursive;
     font-size: xx-large;
     font-weight: bolder;

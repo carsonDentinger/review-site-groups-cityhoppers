@@ -10,6 +10,7 @@ import java.util.Objects;
 
 @Entity
 public class HashPage {
+
     @Id
     @GeneratedValue
     private long id;
@@ -21,7 +22,6 @@ public class HashPage {
     private Collection<CityReview> cityReviews;
 
     public HashPage(String name, String description, String imgUrl) {
-
         this.name = name;
         this.description = description;
         this.imgUrl = imgUrl;
