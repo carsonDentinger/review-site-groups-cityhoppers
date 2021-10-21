@@ -16,22 +16,25 @@ xmlns:th="http://www.thymeleaf.org">
         <title>Regions</title>
     </head>
     <body>
-    <div th:insert = "fragments/header-footer:: header"></div>
+        <div th:insert = "fragments/header-footer:: header">
+        </div>
 
+    <div class="background">
         <h1 id="regionsTitle">Regions</h1>
-        <h2>Select a region to explore our reviews</h2>
+        <h2 id="select">Select a region to explore our reviews</h2>
 
         <div id="mainBody">
             <ul id="cardGrid">
-                <li class="card"  th:each ="Region: ${Regions}"><a   th:href = "'/SubRegion/'+ ${Region.id}">
+                <li class="card"  th:each ="Region: ${Regions}"><a th:href = "'/SubRegion/'+ ${Region.id}" id="cardLinks">
                     <div class="container">
-                    <h3 class="cardTitle" th:text = "${Region.regionName}"></h3>
-                    <img th:src="${Region.imgUrl}" class="image" >
-                </div></a>
+                        <h3 class="cardTitle" th:text = "${Region.regionName}"></h3>
+                        <img th:src="${Region.imgUrl}" class="image" >
+                    </div></a>
                 </li>
 
             </ul>
         </div>
+    </div>
     <div th:insert ="fragments/header-footer:: footer"></div>
     </body>
 </html>

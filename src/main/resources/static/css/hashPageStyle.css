@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 
+body{
+    background-color: #D1F0B1;
+}
+
+#categoryTitle{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom:2rem;
+    font-size: 4rem;
+}
+
 #cardGrid{
     list-style: none;
     display: grid;
@@ -12,10 +24,11 @@
 }
 
 .cardTitle{
+    display: flex;
+    justify-content: center;
     font-family: 'Caveat', cursive;
     font-size: xx-large;
     font-weight: bolder;
-    padding-left: 40%;
 }
 
 .image{
@@ -25,7 +38,7 @@
 }
 
 .card {
-    background-color: yellow;
+    background-color: #C05746;
     width: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
     transition: 0.3s;
@@ -40,11 +53,16 @@
     padding: 2px 16px;
 }
 
+#cardLinks{
+    text-decoration: none;
+    color: black;
+}
+
 #mainBody{
     margin: 0 auto;
     display: grid;
     justify-content: space-around;
-    background-color: aqua;
+    background-color: #D1F0B1;
     padding-left: 5rem;
     padding-right: 5rem;
     width: fit-content;

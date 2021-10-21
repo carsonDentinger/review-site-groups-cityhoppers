@@ -13,7 +13,7 @@
 <body>
 <div th:insert = "fragments/header-footer:: header"></div>
 <div>
-    <h1>All Hashtags</h1>
+    <h1 id="categoryTitle">All Categories</h1>
     <div id="mainBody">
         <ul id="cardGrid">
             <li class="card" th:each = "hashtag: ${Hashtags}">
@@ -22,7 +22,7 @@
                             <h3 class="cardTitle" th:text = "${hashtag.name}"></h3>
                             <img th:src="${hashtag.imgUrl}" class="image">
                         </div>
-                    </a>
+                </a>
 <!--                <p th:text = "${hashtag.description}"></p>-->
             </li>
         </ul>
