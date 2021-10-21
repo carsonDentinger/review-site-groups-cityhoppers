@@ -26,13 +26,19 @@
     <h2 th:text="${CityReview.slogan}"></h2>
     <h3 th:text="'Population ' + ${CityReview.population}"></h3>
     <p th:text="${CityReview.review}"></p>
+
     <div>
         <!--    Added a list to show the hashtags that belong to the current city. Need to add hfref tags for linking-->
 
         <div class="mainContent">
 
             <div class="cityImg">
-                <p>city picture</p>
+                <ul>
+                    <li th:each="cityReviewSite: ${CityReview}">
+                        <a th:url="'/CityReview/' + ${cityReviewSite.id}"> <img th:src="${cityReviewSite.imgUrl}" class="image"> </a>
+                    </li>
+                </ul>
+
             </div>
 
             <div class="infoBlock">
