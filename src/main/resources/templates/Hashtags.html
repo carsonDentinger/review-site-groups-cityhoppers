@@ -16,11 +16,13 @@
     <h1 id="categoryTitle">All Categories</h1>
     <div id="mainBody">
         <ul id="cardGrid">
-            <li class="card" th:each = "hashtag: ${Hashtags}"><a  th:href = "'/SubHashPage/' + ${hashtag.id}" id="cardLinks">
-                <div class="container">
-                    <h3 class="cardTitle" th:text = "${hashtag.name}"></h3>
-                    <img th:src="${hashtag.imgUrl}" class="image">
-                </div></a>
+            <li class="card" th:each = "hashtag: ${Hashtags}">
+                <a  th:href = "'/SubHashPage/' + ${hashtag.id}">
+                        <div class="container">
+                            <h3 class="cardTitle" th:text = "${hashtag.name}"></h3>
+                            <img th:src="${hashtag.imgUrl}" class="image">
+                        </div>
+                </a>
 <!--                <p th:text = "${hashtag.description}"></p>-->
             </li>
         </ul>

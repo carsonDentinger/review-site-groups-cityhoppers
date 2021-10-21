@@ -16,7 +16,8 @@ xmlns:th="http://www.thymeleaf.org">
         <title>Regions</title>
     </head>
     <body>
-    <div th:insert = "fragments/header-footer:: header"></div>
+        <div th:insert = "fragments/header-footer:: header">
+        </div>
 
     <div class="background">
         <h1 id="regionsTitle">Regions</h1>
@@ -26,9 +27,9 @@ xmlns:th="http://www.thymeleaf.org">
             <ul id="cardGrid">
                 <li class="card"  th:each ="Region: ${Regions}"><a th:href = "'/SubRegion/'+ ${Region.id}" id="cardLinks">
                     <div class="container">
-                    <h3 class="cardTitle" th:text = "${Region.regionName}"></h3>
-                    <img th:src="${Region.imgUrl}" class="image" >
-                </div></a>
+                        <h3 class="cardTitle" th:text = "${Region.regionName}"></h3>
+                        <img th:src="${Region.imgUrl}" class="image" >
+                    </div></a>
                 </li>
 
             </ul>
