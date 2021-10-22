@@ -2,18 +2,31 @@
 .bg{
     display: grid;
     height: 100vh;
-    background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.55)), url(/img/WashingtonD_C.jpg) ;
+    background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.55)), url(/img/City_Scape.jpg) ;
+}
+.head{
+    display: flex;
+    justify-content: center;
 }
 .head h1{
     color: whitesmoke;
-    padding-left: 3%;
+    /* padding-left: 3%; */
     padding-top: 3%;
+}
+.form-container{
+display: flex;
+justify-content: center;
+font-size: 135%;
+
 }
 .form-base{
     display: flex;
-    background-color: rgba(175, 175, 152, 0.6);
+    justify-content: center;
+    background-color: rgba(158, 158, 142, 0.6);
     width: 450px;
     height: 450px;
+    padding-bottom: 7%;
+    padding-top: 3%;
     
     
 }
