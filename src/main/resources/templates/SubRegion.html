@@ -6,16 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="/css/nav.css">
-        <title>West</title>
+        <link rel="stylesheet" href="/css/subRegionStyle.css">
+        <title>SubRegion</title>
 </head>
     <body>
     <div th:insert = "fragments/header-footer:: header"></div>
 
-        <h1 th:text="${SubRegion.regionName}"></h1>
-        <h2 th:text="${SubRegion.regionDescription}"></h2>
-        <div>
-            <ul>
-                <li  th:each = "cityReview: ${SubRegion.cityReviews}"><a th:href = "'/CityReview/' + ${cityReview.id}" th:text = "${cityReview.name}"></a></li>
+        <h1 th:text="${SubRegion.regionName}" id="subRegionsTitle"></h1>
+        <h2 th:text="${SubRegion.regionDescription}" id="subRegionDescription"></h2>
+
+        <div id="mainBody">
+            <ul id="cardGrid">
+                <li class="card" th:each = "cityReview: ${SubRegion.cityReviews}"><a th:href = "'/CityReview/' + ${cityReview.id}"  id="cardLinks">
+                    <div class="container">
+                        <h3 class="cardTitle" th:text = "${cityReview.name}"></h3>
+                        <img th:src="${cityReview.imgUrl}" class="image">
+                    </div></a>
+                </li>
             </ul>
         </div>
     <div th:insert ="fragments/header-footer:: footer"></div>

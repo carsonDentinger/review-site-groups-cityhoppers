@@ -24,38 +24,63 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Region midwest = new Region("Midwest", "no longer mad", "/img/midwest.jpg");
+        Region midwest = new Region("Midwest", "The Heartland of America", "/img/midwest.jpg");
         regionRepo.save(midwest);
 
-        Region west = new Region("West", "West coast best coast", "/img/West.jpg");
+        Region west = new Region("West", "The New Frontier!", "/img/West.jpg");
         regionRepo.save(west);
 
-        Region east = new Region("NorthEast", "East coast beast coast", "/img/NewEngland.jpg");
+        Region east = new Region("NorthEast", "Birthplace of America", "/img/NewEngland.jpg");
         regionRepo.save(east);
 
-        Region south = new Region("South", "the south will rise", "/img/South.jpg");
+        Region south = new Region("The South", "Bless Your Heart!", "/img/South.jpg");
         regionRepo.save(south);
 
-        HashPage nightLife = new HashPage("Night Life", "lorem ipsum", "/img/nightlife.jpg");
+        HashPage nightLife = new HashPage("Night Life", "Party 'til the sun comes up in America's hottest nightlife hubs!", "/img/nightlife.jpg");
         hashRepo.save(nightLife);
 
-        HashPage musicCulture = new HashPage("Music Culture", "", "/img/music.jpg");
+        HashPage musicCulture = new HashPage("Music Culture", "Explore the musical roots of America!", "/img/music.jpg");
         hashRepo.save(musicCulture);
 
-        HashPage historicAttractions = new HashPage("Historic Attractions", "Different attractions to visit", "/img/history.jpg");
+        HashPage historicAttractions = new HashPage("Historic Attractions", "Explore the rich culture of America's most storied cities!", "/img/history.jpg");
         hashRepo.save(historicAttractions);
 
-        HashPage foodCulture = new HashPage("Food Culture", "", "/img/restaurant.jpg");
+        HashPage foodCulture = new HashPage("Food Culture", "Enjoy the finest cuisine America has to offer!", "/img/restaurant.jpg");
         hashRepo.save(foodCulture);
 
-        CityReview cityReview1 = new CityReview("Portland", "City of Roses", 600000l, "PortlandReview", "/img/portland1.jpg", west, nightLife);
-        CityReview cityReview2 = new CityReview("Seattle", "Emerald City", 7370000l, "", "/img/seattle.jpg", west, historicAttractions);
-        CityReview cityReview3 = new CityReview("Columbus", "Buckeye City", 850000l, "", "", midwest, historicAttractions);
-        CityReview cityReview4 = new CityReview("Washington D.C.", "Capital City", 500000l, "", "", east, historicAttractions, musicCulture);
+        CityReview cityReview1 = new CityReview("Portland, OR", "City of Roses", 645291l, "PortlandReview", "/img/portland1.jpg", west, foodCulture, musicCulture);
+        CityReview cityReview2 = new CityReview("Seattle, WA", "Emerald City", 7370000l, "", "/img/seattle.jpg", west, historicAttractions, musicCulture);
+        CityReview cityReview3 = new CityReview("Columbus, OH", "Buckeye City", 878553l, "", "/img/Columbus.jpg", midwest, foodCulture);
+        CityReview cityReview4 = new CityReview("Washington D.C.", "Capital City", 500000l, "", "/img/WashingtonD_C.jpg", east, historicAttractions, musicCulture);
+        CityReview cityReview5 = new CityReview("Los Angeles, CA", "City of Angels", 3900000l, "lorem", "/img/LosAngeles.jpg", west, nightLife, musicCulture, foodCulture);
+        CityReview cityReview6 = new CityReview("Salt Lake City, UT", "The Crossroads of the West", 201249l, "lorem", "/img/SLC.jpg",west, nightLife, foodCulture, historicAttractions);
+        CityReview cityReview7 = new CityReview("Atlanta, GA", "The Big Peach", 488800l, "lorem", "/img/ATL.jpg", south, musicCulture, foodCulture, nightLife, historicAttractions);
+        CityReview cityReview8 = new CityReview("Nashville, TN", "Music City", 692587l, "lorem", "/img/Nashville.jpg",south, musicCulture, historicAttractions, nightLife);
+        CityReview cityReview9 = new CityReview("New Orleans, LA", "The Big Easy", 390845l, "", "/img/NOLA.jpg", south, musicCulture, foodCulture, historicAttractions, nightLife);
+        CityReview cityReview10 = new CityReview("Savannah, GA", "Hostess City of the South", 145403l, "", "/img/savannah.jpg", south, historicAttractions, musicCulture);
+        CityReview cityReview11 = new CityReview("Miami, FL", "The Magic City", 442241l, "", "/img/miami.jpg", south, musicCulture, nightLife);
+        CityReview cityReview12 = new CityReview("Mobile, AL", "The Azalea City", 190432l, "", "/img/Mobile.jpg", south, historicAttractions, foodCulture);
+        CityReview cityReview13 = new CityReview("Boston, MA", "Beantown", 684379l, "", "/img/Boston.jpg", east, historicAttractions, musicCulture, nightLife);
+        CityReview cityReview14 = new CityReview("Charleston, WV", "Charlie West", 48006l, "", "/img/Charleston.jpg", east, historicAttractions, foodCulture);
+        CityReview cityReview15 = new CityReview("New York, NY", "The City that Never Sleeps", 8419000l, "", "/img/NYC.jpg", east, historicAttractions, foodCulture, nightLife, musicCulture);
+        CityReview cityReview16 = new CityReview("Burlington, VT", "The Queen City", 42545l, "","/img/Burlington.jpg", east, foodCulture, musicCulture);
+        CityReview cityReview17 = new CityReview("Philadelphia, PA", "City of Brotherly Love", 1579000l, "", "/img/philly.png", east, musicCulture, historicAttractions, nightLife);
         cityRepo.save(cityReview1);
         cityRepo.save(cityReview2);
         cityRepo.save(cityReview3);
         cityRepo.save(cityReview4);
+        cityRepo.save(cityReview5);
+        cityRepo.save(cityReview6);
+        cityRepo.save(cityReview7);
+        cityRepo.save(cityReview8);
+        cityRepo.save(cityReview9);
+        cityRepo.save(cityReview10);
+        cityRepo.save(cityReview11);
+        cityRepo.save(cityReview12);
+        cityRepo.save(cityReview13);
+        cityRepo.save(cityReview14);
+        cityRepo.save(cityReview15);
+        cityRepo.save(cityReview16);
+        cityRepo.save(cityReview17);
     }
-
 }
