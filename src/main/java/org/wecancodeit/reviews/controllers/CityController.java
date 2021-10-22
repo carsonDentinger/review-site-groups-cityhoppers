@@ -56,9 +56,9 @@ public class CityController {
         return "CityReview";
     }
 
-    @RequestMapping("/WriteReview/")
+    @RequestMapping("/writeCityReview")
     public String writeReview(Model subCityReviewModel) {
-        //"regions" is a keyvalue pairing
+        //"regions" is a key value pairing
     subCityReviewModel.addAttribute("Regions" , regionsRepo.findAll());
         return "writeCityReview";
     }

@@ -13,17 +13,16 @@
 <body>
     <div th:insert = "fragments/header-footer:: header">
     </div>
+    <div class="heading">
+        <h1>All City Hopper Reviews</h1>
+    </div>
 
-    <h1>All City Hopper Reviews</h1>
-
-    <div >
-        <ul  id="card-grid">
-            <li id="card" th:each = "CityReview: ${CityReviewList}" >
-                <a th:href = "'/CityReview/' + ${CityReview.id}">
-                    <div class="container">
-                        <h3 class="review-name" th:text="${CityReview.name}"></h3>
-                        <img th:src="${CityReview.imgUrl}" class="image">
-                    </div>    
+    <div>
+        <ul  class="card-grid">
+            <li class="card" th:each = "CityReview: ${CityReviewList}" >
+                <a th:href = "'/CityReview/' + ${CityReview.id}">                    
+                       <div><h3 class="review-name" th:text="${CityReview.name}"></h3></div>
+                        <div><img th:src="${CityReview.imgUrl}" class="card-img"></div>                 
                 </a>
             </li>
         </ul>

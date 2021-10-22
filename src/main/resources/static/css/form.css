@@ -1,0 +1,19 @@
+
+.bg{
+    display: grid;
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.55)), url(/img/WashingtonD_C.jpg) ;
+}
+.head h1{
+    color: whitesmoke;
+    padding-left: 3%;
+    padding-top: 3%;
+}
+.form-base{
+    display: flex;
+    background-color: rgba(175, 175, 152, 0.6);
+    width: 450px;
+    height: 450px;
+    
+    
+}
