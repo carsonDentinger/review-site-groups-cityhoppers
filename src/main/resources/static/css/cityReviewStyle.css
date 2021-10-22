@@ -1,35 +1,38 @@
 body {
-    background-color: #D1F0B1;
+    background-color: #62A87C;
+}
+
+li {
+    list-style: none;
 }
 
 .mainContent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    justify-content: center;
-    margin: 3rem;
-
+    gap: 5rem;
+    justify-content: space-around;
+    margin: 10rem;
 }
 
 .cityImg {
     grid-column-start: 1;
     grid-column-end: 2;
-    background-color: lightblue;
+    background-color: #D1F0B1;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
-    min-height: 500px;
-    background-color: #fff;
+    min-height: 300px;
     font-size: large;
 }
 
+
 .infoBlock {
-    background-color: lightblue;
+    background-color: #D1F0B1;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
-    min-height: 500px;
-    background-color: #fff;
+    min-height: 300px;
+
     font-size: large;
 
 }
@@ -38,42 +41,36 @@ body {
     list-style: none;
 }
 
-.hashFormBlock {
-    background-color: lightblue;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    min-height: 200px;
-    background-color: #fff;
+.hashBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #D1F0B1;
     font-size: medium;
 }
 
-.associatedHashes {
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    min-height: 200px;
-    background-color: #fff;
-    font-size: medium;
+.hashBlock  h2{
+    font-size: large;
+    padding: .5rem;
 }
 
 .commentDiv {
+    grid-column-start: 2;
+    grid-column-end: 3;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
     min-height: 200px;
-    background-color: #fff;
+    background-color: #D1F0B1;
     font-size: medium;
 }
 
 .commentDiv li {
- list-style: none;
+    list-style: none;
 }
 
 form {
     margin: 0rem 1rem;
     padding: 0rem 1rem;
-
 }
 
 .formLayout {
@@ -82,11 +79,33 @@ form {
 }
 
 .commentBox {
-margin: 2rem 6rem;
-min-width:50px;
-min-height: 20px;
-boarder-color: black;
-border-radius: 5px;
-border-style: solid;
-border-width: 2px;
+    margin: 2rem 6rem;
+    min-width: 50px;
+    min-height: 20px;
+    border-color: #D1F0B1;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    font-size: medium;
 }
+
+input[type=text], select {
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    margin: 1rem 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #C05746;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
