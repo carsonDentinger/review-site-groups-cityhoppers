@@ -48,7 +48,7 @@ public class Populator implements CommandLineRunner {
         HashPage foodCulture = new HashPage("Food Culture", "Enjoy the finest cuisine America has to offer!", "/img/restaurant.jpg");
         hashRepo.save(foodCulture);
 
-        CityReview cityReview1 = new CityReview("Portland, OR", "City of Roses", 645291l, "PortlandReview", "/img/portland1.jpg", west, foodCulture, musicCulture);
+        CityReview cityReview1 = new CityReview("Portland, OR", "City of Roses", 645291l, "PortlandReview", "/img/portland1.jpeg", west, foodCulture, musicCulture);
         CityReview cityReview2 = new CityReview("Seattle, WA", "Emerald City", 7370000l, "", "/img/seattle.jpg", west, historicAttractions, musicCulture);
         CityReview cityReview3 = new CityReview("Columbus, OH", "Buckeye City", 878553l, "", "/img/Columbus.jpg", midwest, foodCulture);
         CityReview cityReview4 = new CityReview("Washington D.C.", "Capital City", 500000l, "", "/img/WashingtonD_C.jpg", east, historicAttractions, musicCulture);
@@ -65,6 +65,13 @@ public class Populator implements CommandLineRunner {
         CityReview cityReview15 = new CityReview("New York, NY", "The City that Never Sleeps", 8419000l, "", "/img/NYC.jpg", east, historicAttractions, foodCulture, nightLife, musicCulture);
         CityReview cityReview16 = new CityReview("Burlington, VT", "The Queen City", 42545l, "","/img/Burlington.jpg", east, foodCulture, musicCulture);
         CityReview cityReview17 = new CityReview("Philadelphia, PA", "City of Brotherly Love", 1579000l, "", "/img/philly.png", east, musicCulture, historicAttractions, nightLife);
+        CityReview cityReview18 = new CityReview("Klamath Falls, OR", "The Dirty K", 21335l, "", "/img/KFalls.jpg", west, historicAttractions);
+        CityReview cityReview19 = new CityReview("Hood River, OR", "City in the Shadow of the Mountain", 7715l, "", "/img/HoodRiver.jpg", west, foodCulture, musicCulture);
+        CityReview cityReview20 = new CityReview("Chicago, IL", "The Windy City", 2710000l, "", "/img/CHI.jpg", midwest, historicAttractions, musicCulture, foodCulture, nightLife);
+        CityReview cityReview21 = new CityReview("Cleveland, OH", "The Forest City", 385282l, "", "/img/CLE.jpg", midwest, foodCulture, historicAttractions);
+        CityReview cityReview22 = new CityReview("Detroit, MI", "Motor City", 674841l, "", "/img/Detroit.jpg", midwest, musicCulture, historicAttractions, nightLife);
+        CityReview cityReview23 = new CityReview("Milwaukee, WI", "Cream City", 594598l, "", "/img/milwaukee.jpg", midwest, foodCulture, historicAttractions);
+        CityReview cityReview24 = new CityReview("St. Louis, MO", "The Gateway to the West", 308174l, "", "/img/STLouis.jpg", midwest, historicAttractions);
         cityRepo.save(cityReview1);
         cityRepo.save(cityReview2);
         cityRepo.save(cityReview3);
@@ -82,5 +89,12 @@ public class Populator implements CommandLineRunner {
         cityRepo.save(cityReview15);
         cityRepo.save(cityReview16);
         cityRepo.save(cityReview17);
+        cityRepo.save(cityReview18);
+        cityRepo.save(cityReview19);
+        cityRepo.save(cityReview20);
+        cityRepo.save(cityReview21);
+        cityRepo.save(cityReview22);
+        cityRepo.save(cityReview23);
+        cityRepo.save(cityReview24);
     }
 }
