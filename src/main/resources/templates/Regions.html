@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+ <!DOCTYPE html >
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 xmlns:th="http://www.thymeleaf.org">
     <head>
@@ -19,6 +19,7 @@ xmlns:th="http://www.thymeleaf.org">
         <div th:insert = "fragments/header-footer:: header">
         </div>
 
+    <div class="background">
         <h1 id="regionsTitle">Regions</h1>
         <h2 id="select">Select a region to explore our reviews</h2>
 
@@ -30,11 +31,9 @@ xmlns:th="http://www.thymeleaf.org">
                         <img th:src="${Region.imgUrl}" class="image" >
                     </div></a>
                 </li>
-
             </ul>
         </div>
-        
-        <div th:insert ="fragments/header-footer:: footer">
-        </div>
+    </div>
+    <div th:insert ="fragments/header-footer:: footer"></div>
     </body>
 </html>

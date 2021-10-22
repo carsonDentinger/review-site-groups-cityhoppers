@@ -15,6 +15,8 @@ public class CityReview {
     private String name;
     private String slogan;
     private Long population;
+    //@Column(length=1000) for string lengths
+    @Lob
     private String review;
     private String imgUrl;
 

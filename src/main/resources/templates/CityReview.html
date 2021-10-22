@@ -22,20 +22,21 @@
 <body>
 
     <div th:insert="fragments/header-footer:: header"></div>
-    <h1 th:text="${CityReview.name}"></h1>
+    <!-- <h1 th:text="${CityReview.name}"></h1>
     <h2 th:text="${CityReview.slogan}"></h2>
     <h3 th:text="'Population ' + ${CityReview.population}"></h3>
-    <p th:text="${CityReview.review}"></p>
+    <p th:text="${CityReview.review}"></p> -->
 
     <div>
         <!--    Added a list to show the hashtags that belong to the current city. Need to add hfref tags for linking-->
-
         <div class="mainContent">
 
             <div class="cityImg">
                 <ul>
                     <li th:each="cityReviewSite: ${CityReview}">
-                        <a th:url="'/CityReview/' + ${cityReviewSite.id}"> <img th:src="${cityReviewSite.imgUrl}" class="image"> </a>
+                        <h1 th:text="${cityReviewSite.name}"></h1>
+                        <a th:url="'/CityReview/' + ${cityReviewSite.id}"> <img th:src="${cityReviewSite.imgUrl}"
+                                class="image"></a>
                     </li>
                 </ul>
 
@@ -52,29 +53,31 @@
                     <li>
                         <h3 th:text="'Population ' + ${CityReview.population}"></h3>
                     </li>
-                    <li th:each="hashtag: ${CityReview.hashPages}" th:text="${hashtag.name}"></li>
-
                 </ul>
 
                 <p th:text="${CityReview.review}"></p>
             </div>
 
             <div class="infoBlock">
-                <ul>
-                    <li th:each="hashPage: ${CityReview.hashPages}">
-                        <a th:href="'/SubHashPage/' + ${hashPage.id}">
-                            <h3 th:text="${hashPage.name}"></h3>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <div class=hashBlock>
+                    <section>
+                        <h2> Associated Categories: </h2>
+                        <ul>
+                            <li th:each="hashPage: ${CityReview.hashPages}">
+                                <a th:href="'/SubHashPage/' + ${hashPage.id}">
+                                    <h2 th:text="${hashPage.name}"></h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
 
-            <div class=hashFormBlock>
-                <br>
-                <!--    Action has the mapping for the under the add hash for the controller the method needs to be post otherwise runs
+                    <section>
+                        <h2>Add a Category:</h2>
+                        <br>
+                        <!--    Action has the mapping for the under the add hash for the controller the method needs to be post otherwise runs
  as a get and doesn't query the DB properly  -->
-                <form action="/addHash" method="post">
-                    <!--        this is a hidden field to the user. We need it to map the city review page we are currently on. Also match
+                        <form action="/addHash" method="post">
+                            <!--        this is a hidden field to the user. We need it to map the city review page we are currently on. Also match
 it with the correct thymeleaf syntax. Name and value have a key value relationship-->
                 <input type="hidden" name="cityID" th:value="${CityReview.id}">
                 <!--        the label is what the user sees in the text box ie Enter Hashtag-->
@@ -92,10 +95,7 @@ it with the correct thymeleaf syntax. Name and value have a key value relationsh
         </div>
 
 
-            <!--    Action has the mapping for the under the add hash for the controller the method needs to be post otherwise runs
-as a get and doesn't query the DB properly  -->
             <div class="commentDiv">
-                <h2>Add a comment</h2>
                 <section class="formLayout">
                     <form action="/addComment" method="post">
                         <input type="hidden" name="cityID" th:value="${CityReview.id}">
@@ -114,11 +114,10 @@ as a get and doesn't query the DB properly  -->
                     </div>
                 </section>
             </div>
-
         </div>
 
-    </div>
-    <div th:insert="fragments/header-footer:: footer"></div>
+
+        <div th:insert="fragments/header-footer:: footer"></div>
 </body>
 
 </html>

@@ -1,0 +1,73 @@
+body{
+    background-color: #D1F0B1;
+}
+
+#subHashTitle{
+    display: flex;
+    justify-content: center;
+}
+
+#subHashDescription{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+#mainBody{
+    margin: 0 auto;
+    display: grid;
+    justify-content: space-around;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    width: fit-content;
+    padding-bottom: 6rem;
+}
+
+#select{
+    display: flex;
+    justify-content: center;
+}
+
+#cardGrid{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+
+.cardTitle{
+    display: flex;
+    justify-content: center;
+    font-family: 'Caveat', cursive;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.image{
+    width: 25rem;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card {
+    background-color: #C05746;
+    width: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#cardLinks{
+    text-decoration: none;
+    color: black;
+}
