@@ -22,7 +22,12 @@ li {
     border-width: 2px;
     border-radius: 5px;
     min-height: 300px;
+    max-width: 1100px;
     font-size: large;
+}
+
+img {
+    max-width: 100%;
 }
 
 
@@ -32,9 +37,14 @@ li {
     border-width: 2px;
     border-radius: 5px;
     min-height: 300px;
+    max-width: 1100px;
 
     font-size: large;
 
+}
+
+h2, h3 {
+    padding: 2rem;
 }
 
 .infoBlock li {
@@ -60,6 +70,7 @@ li {
     border-width: 2px;
     border-radius: 5px;
     min-height: 200px;
+    max-width: 1100px;
     background-color: #D1F0B1;
     font-size: medium;
 }
@@ -81,6 +92,7 @@ form {
 .commentBox {
     margin: 2rem 6rem;
     min-width: 50px;
+    max-width: 1100px;
     min-height: 20px;
     border-color: #D1F0B1;
     border-radius: 5px;

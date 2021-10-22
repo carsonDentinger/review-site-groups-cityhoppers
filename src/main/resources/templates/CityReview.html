@@ -22,13 +22,8 @@
 <body>
 
     <div th:insert="fragments/header-footer:: header"></div>
-    <!-- <h1 th:text="${CityReview.name}"></h1>
-    <h2 th:text="${CityReview.slogan}"></h2>
-    <h3 th:text="'Population ' + ${CityReview.population}"></h3>
-    <p th:text="${CityReview.review}"></p> -->
-
     <div>
-        <!--    Added a list to show the hashtags that belong to the current city. Need to add hfref tags for linking-->
+
         <div class="mainContent">
 
             <div class="cityImg">
@@ -79,21 +74,24 @@
                         <form action="/addHash" method="post">
                             <!--        this is a hidden field to the user. We need it to map the city review page we are currently on. Also match
 it with the correct thymeleaf syntax. Name and value have a key value relationship-->
-                <input type="hidden" name="cityID" th:value="${CityReview.id}">
-                <!--        the label is what the user sees in the text box ie Enter Hashtag-->
-                <label for="name">Enter Category:</label><br>
-                <!--        We're expecting a text input from the user. The "id" here needs to match the "for" above-->
-                <input type="text" id="name" name="name"><br>
-                <!--        Repeat the steps for label and input above-->
-                <label for="description">Enter Description:</label><br>
-                <input type="text" id="description" name="description"><br><br>
-                <label for="imgUrl">Copy Image Url:</label><br>
-                <input type="text" id="imgUrl" name="imgUrl"><br><br>
-                <!--        Button -->
-                <input type="submit" value="Submit">
-            </form>
-        </div>
+                            <input type="hidden" name="cityID" th:value="${CityReview.id}">
+                            <!--        the label is what the user sees in the text box ie Enter Hashtag-->
+                            <label for="name">Enter Category:</label><br>
+                            <!--        We're expecting a text input from the user. The "id" here needs to match the "for" above-->
+                            <input type="text" id="name" name="name"><br>
+                            <!--        Repeat the steps for label and input above-->
+                            <label for="description">Enter Description:</label><br>
+                            <input type="text" id="description" name="description"><br><br>
+                            <label for="imgUrl">Copy Image Url:</label><br>
+                            <input type="text" id="imgUrl" name="imgUrl"><br><br>
+                            <!--        Button -->
+                            <input type="submit" value="Submit">
+                        </form>
 
+                    </section>
+                </div>
+
+            </div>
 
             <div class="commentDiv">
                 <section class="formLayout">
@@ -112,12 +110,11 @@ it with the correct thymeleaf syntax. Name and value have a key value relationsh
                             </li>
                         </ul>
                     </div>
-                </section>
             </div>
         </div>
 
-
-        <div th:insert="fragments/header-footer:: footer"></div>
+    </div>
+    <div th:insert="fragments/header-footer:: footer"></div>
 </body>
 
 </html>
