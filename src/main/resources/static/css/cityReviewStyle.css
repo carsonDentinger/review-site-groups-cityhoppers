@@ -4,6 +4,7 @@ body {
 
 li {
     list-style: none;
+    
 }
 
 .mainContent {
@@ -22,7 +23,19 @@ li {
     border-width: 2px;
     border-radius: 5px;
     min-height: 300px;
+    max-width: 1100px;
     font-size: large;
+    justify-self: center;
+    padding: 1rem;
+    margin: 1rem 1rem;
+    
+}
+
+
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 
@@ -32,14 +45,16 @@ li {
     border-width: 2px;
     border-radius: 5px;
     min-height: 300px;
+    max-width: 1100px;
 
     font-size: large;
 
 }
 
-.infoBlock li {
-    list-style: none;
+h2, h3 {
+    padding: 2rem;
 }
+
 
 .hashBlock {
     display: grid;
@@ -60,6 +75,7 @@ li {
     border-width: 2px;
     border-radius: 5px;
     min-height: 200px;
+    max-width: 1100px;
     background-color: #D1F0B1;
     font-size: medium;
 }
@@ -81,6 +97,7 @@ form {
 .commentBox {
     margin: 2rem 6rem;
     min-width: 50px;
+    max-width: 1100px;
     min-height: 20px;
     border-color: #D1F0B1;
     border-radius: 5px;
