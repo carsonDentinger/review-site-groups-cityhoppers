@@ -22,37 +22,38 @@
             <div class="head">
                 <h1>Review A City</h1>
             </div>
+            
+            <div class="form-container">
+                <div class="form-base">
+                    <form action="/addCityReview" method="post">
 
-            <div class="form-base">
-                <form action="/addCityReview" method="post">
+                        <label for="name">Name of the city</label><br>
+                        <input type="text" id="name" name="name"><br><br>
 
-                    <label for="name">Name of the city</label><br>
-                    <input type="text" id="name" name="name"><br>
+                        <label for="slogan">What's their slogan</label><br>
+                        <input type="text" id="slogan" name="slogan"><br><br>
 
-                    <label for="slogan">What's their slogan</label><br>
-                    <input type="text" id="slogan" name="slogan"><br>
+                        <label for="population">Current population</label><br>
+                        <input type="number" id="population" name="population"><br><br>
 
-                    <label for="population">Current population</label><br>
-                    <input type="number" id="population" name="population"><br>
+                        <label for="review">Write your review</label><br>
+                        <input type="text" id="review" name="review"><br><br>
+                        
+                        <label for="imgUrl">Add image link</label><br>
+                        <input type="text" id="imgUrl" name="imgUrl"><br><br>
 
-                    <label for="review">Write your review</label><br>
-                    <input type="text" id="review" name="review">
-                    
-                    <label for="imgUrl">Add image link</label><br>
-                    <input type="text" id="imgUrl" name="imgUrl"><br><br>
+                        <label for="region">Select A Region</label><br>
+                        <label for="region">Choose a region:</label>
+                        <select name="region" id="region">
 
-                    <label for="region">Select A Region</label><br>
+                            <option th:each="regionSelect: ${Regions}" th:value="${regionSelect.regionName}" th:text="${regionSelect.regionName}"></option>
 
-                    <label for="region">Choose a region:</label>
-                    <select name="region" id="region">
-
-                        <option th:each="regionSelect: ${Regions}" th:value="${regionSelect.regionName}" th:text="${regionSelect.regionName}"></option>
-
-                    </select>
+                        </select>
 
 
-                    <input type="submit" value="Submit">
-                </form>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
         </div> 
 
