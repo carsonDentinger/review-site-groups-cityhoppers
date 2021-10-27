@@ -64,6 +64,4 @@ public class HashController {
 //    We added a list that shows all the hashtags associated with the city reviews. This will include whatever is added.
         return "redirect:/CityReview/" + cityID;
         }
-
-
 }
